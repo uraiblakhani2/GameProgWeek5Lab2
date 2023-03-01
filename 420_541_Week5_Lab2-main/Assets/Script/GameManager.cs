@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -17,9 +19,11 @@ public class GameManager : MonoBehaviour
     public void IncrementScore()
     {
         Score += 1;
-        if ( Score == 4)
+        if ( Score == 3)
         {
             Debug.Log("You win !");
+             SceneManager.LoadScene("New Scene");
         }
     }
+    
 }
